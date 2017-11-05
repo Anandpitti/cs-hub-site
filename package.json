@@ -1,0 +1,19 @@
+{
+  "name": "cs-hub-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "blueimp-file-upload": "^9.19.1",
+    "cloudinary-jquery-file-upload": "^2.3.0",
+    "jquery": "^3.2.1",
+    "mongodb": "^2.2.33"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

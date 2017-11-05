@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  -->
+
+<head>
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CShub</title>
+</head>
+
+<body class="theme-color-light-primary">
+
+	<!-- pre loader -->
+	<div class="preloader center valign-center">
+    	<div class="preloader-wrapper active valign-center">
+      		<div class="spinner-layer spinner-blue">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+	        	</div>
+    	  	</div>
+
+      		<div class="spinner-layer spinner-red">
+        		<div class="circle-clipper left">
+	          		<div class="circle"></div>
+    	    	</div>
+    	    	<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+
+      		<div class="spinner-layer spinner-yellow">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+
+      		<div class="spinner-layer spinner-green">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+    	</div>   
+  	</div>
+
+  	<div id="main-content" class="main-content">
+		<!-- top nav bar -->
+		<nav id="top-nav" class="z-depth-5 theme-color-dark-primary">
+			<div class="nav-wrapper">
+				<div class="container">
+					<!-- logo and name-->
+	    			<ul class="brand-logo left">
+	    				<ul id="side-bar1" class="side-nav theme-color-dark-primary">
+							<li> <a href="/"><span class="theme-text-light-primary">Home</span></a> </li>
+							<li> <a href="/gallery"><span class="theme-text-light-primary">Gallery</span></a> </li>
+							<li> <a href="/clubs"><span class="theme-text-light-primary">Clubs</span></a> </li>
+							<li> <a href="/academics"><span class="theme-text-light-primary">Academics</span></a> </li>
+							<li> <a href="/opportunities"><span class="theme-text-light-primary">Opportunities</span></a> </li>
+							<li> <a href="/contacts"><span class="theme-text-light-primary">Contacts</span></a> </li>
+						</ul>
+
+						<li class="hide-on-med-and-up">
+							<a href="#" data-activates="side-bar1" class="button-collapse1">
+								<i class="material-icons">menu</i>
+							</a>
+						</li>
+
+    					<li><a href="/"> <img class="responsive-img z-depth-6 hide-on-small-and-down" src="images/cshublogo.png" style="height: 50px; width: 50px; 	margin-top: 5px"> </a></li>
+    					<li class="theme-text-light-primary">CS Hub</li>
+    					
+		        	</ul>
+					<!-- menu icon -->
+					
+					<!-- account icon dynamic-->
+          			<div id="account_dynamic_div">
+          			</div>
+
+					<!-- search bar and icon-->
+					<ul class="right hide-on-med-and-down">
+						<li>
+							<a href="#" style="margin-right: 15px;"><i class="material-icons">search</i></a>
+						</li>
+      					<li>
+      						<div class="row" style="margin-right: 10px;">
+        						<div class="input-field">
+	          						<input placeholder="search people" type="text" id="search-people" class="autocomplete theme-color-dark-primary2" style="border: none; border-radius:7px; height:38px; padding-left: 10px;">
+        						</div>
+		    	  			</div>
+		      			</li>
+    				</ul>
+
+				</div>
+
+			</div>
+		</nav>
+
+		<!-- side nav menu data -->
+		<ul id="side-bar2" class="side-nav transparent">
+        <li>
+          <nav class="transparent z-depth-0">
+          </nav>
+          <nav class="transparent z-depth-0">
+          </nav>
+        </li>
+        <li> 
+          <div class="row">
+              <a href="/">
+                  <div class="col m3 offset-m1">
+                      <div class="card theme-color-dark-primary theme-text-light-primary">
+                        <div class="card-image">
+                            <img class="responsive-img" src="images/sample3.png">
+                        </div>
+                              <div class="center">
+                                <span class="card-title">Home</span>
+                              </div>
+                      </div>
+                  </div>
+                </a>
+                <a href="/gallery">
+                  <div class="col m3 offset-m1">
+                      <div class="card theme-color-dark-primary theme-text-light-primary">
+                        <div class="card-image">
+                            <img class="responsive-img" src="images/sample3.png">
+                        </div>
+                              <div class="center">
+                                <span class="card-title">Gallery</span>
+                              </div>
+                      </div>
+                  </div>
+                </a>
+                <a href="/clubs">
+                  <div class="col m3 offset-m1">
+                      <div class="card theme-color-dark-primary theme-text-light-primary">
+                        <div class="card-image">
+                            <img class="responsive-img" src="images/sample3.png">
+                        </div>
+                              <div class="center">
+                                <span class="card-title">Clubs</span>
+                              </div>
+                      </div>
+                  </div>
+                </a>
+          </div>
+        </li>
+        <li> 
+          <div class="row">
+              <a href="/academics">
+                  <div class="col m3 offset-m1">
+                      <div class="card theme-color-dark-primary theme-text-light-primary">
+                        <div class="card-image">
+                            <img class="responsive-img" src="images/sample3.png">
+                        </div>
+                              <div class="center">
+                                <span class="card-title">Academics</span>
+                              </div>
+                      </div>
+                  </div>
+                </a>
+                <a href="/opportunities">
+                  <div class="col m3 offset-m1">
+                      <div class="card theme-color-dark-primary theme-text-light-primary">
+                        <div class="card-image">
+                            <img class="responsive-img" src="images/sample3.png">
+                        </div>
+                              <div class="center">
+                                <span class="card-title">Opportunities</span>
+                              </div>
+                      </div>
+                  </div>
+                </a>
+                <a href="/contacts">
+                  <div class="col m3 offset-m1">
+                      <div class="card theme-color-dark-primary theme-text-light-primary">
+                        <div class="card-image">
+                            <img class="responsive-img" src="images/sample3.png">
+                        </div>
+                              <div class="center">
+                                <span class="card-title">Contacts</span>
+                              </div>
+                      </div>
+                  </div>
+                </a>
+          </div>
+        </li>
+        
+    </ul>
+
+		<!-- main-content -->
+		<div class="row">
+
+      <div id="main-nav-colbar" class="col">    
+        <a id="main-nav-icon" href="#" data-activates="side-bar2" class="button-collapse2 hide-on-small-only center" style="display: block; transform:translateX(-20%);">
+          <i class="material-icons medium transparent theme-text-dark-primary">chevron_right</i>
+        </a>
+      </div>
+
+      <div id="user_msg" class="modal">
+        <div id="user_msg_text" class="modal-content">
+
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-theme-color-dark-primary btn-flat center">Ok</a>
+        </div>
+      </div>
+      
+      <div class="col s12 m8 offset-m1">
+        <div class="col s12">
+          <ul class="hide-on-large-only">
+            <li>
+              <a href="#"><i class="left material-icons theme-text-dark-primary" style="margin-top: 15px;">search</i></a>
+              <div id="search_people_main_page_div" class="col s10 input-field" style="margin-top: 0px;">
+                <input type="text" id="search_people_main_page" class="autocomplete" style="margin-top: 0px;">
+                <label for="search_people_main_page">Search for people</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+			<div class="col s12 m9 offset-m1 center">
+				<span class="theme-text-dark-primary" style="font-size: 20px;">Professors</span>
+        <hr class="theme-text-dark-primary">
+        <br>
+        <div id="professors_contact_div" class="col s12 m12 center">         
+
+        </div>  
+        <br>
+
+        <span class="theme-text-dark-primary" style="font-size: 20px;">Office</span>
+        <hr class="theme-text-dark-primary">
+        <br>
+        <div id="office_contact_div" class="col s12 m12 center">         
+          
+        </div>
+        <br>
+
+        <span class="theme-text-dark-primary" style="font-size: 20px;">Other contacts</span>
+        <hr class="theme-text-dark-primary">
+        <br>
+        <div id="other_contact_div" class="col s12 m12 center">         
+          
+        </div>
+        <br>
+			</div>
+			
+		</div>
+
+		<!-- footer -->
+	    <div class="footer-copyright z-depth-5 theme-color-dark-primary">
+            <div class="container theme-text-light-primary">
+       	    <span>&#0169 2017 All rights reserved. Department of Computer Science, College of Engineering, Guindy.</span>
+         	</div>
+        </div>       
+
+    </div>
+
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+	<!-- Compiled and minified JavaScript -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  	  	
+  	<script src="node_modules/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+  	<script src="node_modules/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+  	<script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
+  	<script src="node_modules/cloudinary-jquery-file-upload/cloudinary-jquery-file-upload.js"></script>
+  	<!--
+  	<script src="node_modules/jquery/dist/jquery.js"></script>
+	-->
+
+  	<!-- Custom JavaScript -->
+  	<script src="js/custom.js"></script>
+
+</body>

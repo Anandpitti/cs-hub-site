@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  -->
+
+<head>
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="css/materialize.css">
+  	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CShub</title>
+</head>
+
+<body class="theme-color-light-primary">
+
+	<!-- pre loader -->
+	<div class="preloader center valign-center">
+    	<div class="preloader-wrapper active valign-center">
+      		<div class="spinner-layer spinner-blue">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+	        	</div>
+    	  	</div>
+
+      		<div class="spinner-layer spinner-red">
+        		<div class="circle-clipper left">
+	          		<div class="circle"></div>
+    	    	</div>
+    	    	<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+
+      		<div class="spinner-layer spinner-yellow">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+
+      		<div class="spinner-layer spinner-green">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+    	</div>   
+  	</div>
+
+  	<div id="main-content" class="main-content">
+		<!-- top nav bar -->
+		<nav id="top-nav" class="z-depth-5 theme-color-dark-primary">
+			<div class="nav-wrapper">
+				<div class="container">
+					<!-- logo and name-->
+          <ul class="brand-logo left">
+            <li> <img class="responsive-img z-depth-6 hide-on-small-and-down" src="images/cshublogo.png" style="height: 50px; width: 50px;  margin-top: 5px"> </li>
+            <li class="theme-text-light-primary">CS Hub</li>
+          </ul>
+
+					<!-- go to home button -->
+					<ul class="right hide-on-small-only">
+            <a href="/" class="z-depth-1 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary">HOME</a>
+          </ul>
+          <ul class="right hide-on-med-and-up">
+            <a href="/" class="transparent"><i class="material-icons center theme-text-light-primary">home</i></a>
+          </ul>
+
+				</div>
+			</div>
+		</nav>
+
+		<!-- main-content -->
+		<div class="row">
+      <!-- empty nav -->
+      <nav class="transparent z-depth-0">
+      </nav>
+
+      <!-- top tab -->
+      <div class="col s12 m12">
+        <ul class="tabs transparent theme-text-dark-primary">
+          <li class="tab col s6 m3 offset-m3"><a class="active" href="#login_card"><span class="theme-text-dark-primary">Log in</span></a></li>
+          <li class="tab col s6 m3"><a href="#register_card"><span class="theme-text-dark-primary">Register</span></a></li>
+        </ul>
+      </div>
+
+      <div id="user_msg" class="modal">
+        <div id="user_msg_text" class="modal-content">
+
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-theme-color-dark-primary btn-flat center">Ok</a>
+        </div>
+      </div>
+
+      <!-- login card -->
+      <div id="login_card" class="col s12 m6 offset-m3">
+          <div class="card theme-color-dark-primary">
+            <div class="card-content theme-text-light-primary">
+              <span class="card-title center">Welcome to Cshub</span>
+              <div class="row">
+                <div class="input-field col s10 offset-s1">
+                  <input id="login_email_id_input" class="theme-text-light-primary" type="text">
+                  <label class="theme-text-light-primary" for="login_email_id_input">Email address</label>
+                </div>
+                <div class="input-field col s10 offset-s1">
+                  <input id="login_password_input" class="theme-text-light-primary" type="password">
+                  <label class="theme-text-light-primary" for="login_password_input">Password</label>
+                </div>
+                <div class="col s10 offset-s1">
+                  <div class="center">
+                    <br>
+                    <a href="#!" class="z-depth-2 waves-effect waves-theme-text-dark-primary btn theme-color-light-primary theme-text-dark-primary" onclick="validate_login()">Log in</a>
+                    <br><br>
+                    <a href="" class="tooltipped theme-text-light-primary" data-position="bottom" data-delay="50" data-tooltip="Please contact the site maintainer! functionality not added yet">Forgot password? click here</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- register card -->
+      <div id="register_card" class="col s12 m6 offset-m3">
+        <div class="card theme-color-light-primary">
+            <div class="card-content theme-text-dark-primary">
+              <span class="card-title center">Hi there! you are just a few steps from registering</span>
+              <br>
+              <div class="row">
+
+                <div class="input-field col s10 offset-s1">
+                  <select id="t_s_type">
+                    <option value="" disabled selected>Choose</option>
+                    <option value="1">Student</option>
+                    <option value="2">Teacher</option>
+                  </select>
+                  <label class="">Teacher or Student</label>
+                </div>
+
+                <div id="register_details" class="col s12">
+                </div>
+                
+              </div>
+            </div>
+          </div>
+      </div>
+
+		</div>
+
+		<!-- footer 
+	    <div class="footer-copyright z-depth-5 theme-color-dark-primary">
+            <div class="container theme-text-light-primary">
+       	    <span>&#0169 2017 All rights reserved. Department of Computer Science, College of Engineering, Guindy.</span>
+         	</div>
+        </div>       
+      -->
+    </div>
+
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  	<!-- Custom JavaScript -->
+  	<script src="js/custom.js"></script>
+
+    <script src="node_modules/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="node_modules/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+    <script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
+    <script src="node_modules/cloudinary-jquery-file-upload/cloudinary-jquery-file-upload.js"></script>
+  	
+</body>

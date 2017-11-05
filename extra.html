@@ -1,0 +1,1702 @@
+
+
+<input name="file" type="file"
+   class="file-upload" data-cloudinary-field="image_id"
+   data-form-data="{ 'transformation': {'crop':'limit','tags':'samples','width':3000,'height':2000}}"/>
+
+
+// cloudinary details
+
+login password Firethedesire
+
+$.cloudinary.image("sample", {"crop":"fill","gravity":"faces","width":300,"height":200,"format":"jpg"});
+
+api key
+983978113724322
+
+api secret
+atmXVAdDr4IPXFSS_EcAYAbjuM0
+
+environment variable
+cloudinary://983978113724322:atmXVAdDr4IPXFSS_EcAYAbjuM0@cshub-resources/
+
+Preset name: cshub-resource-unsigned
+
+
+// mongo db details
+
+login first name      Anand
+
+login last name       pitti
+
+login password        Desire@123
+
+cluster name          cshub-db-cluster
+
+Admin username        cshub-db-resource
+
+password              Firethedesire
+
+mongo db username     cshub-db-resource@admin
+
+mongo db roles        atlasAdmin@admin
+
+password for admin    Firethedesire
+
+mongo "mongodb://cshub-db-cluster-shard-00-00-8n65g.mongodb.net:27017,cshub-db-cluster-shard-00-01-8n65g.mongodb.net:27017,cshub-db-cluster-shard-00-02-8n65g.mongodb.net:27017/test?replicaSet=cshub-db-cluster-shard-0" --authenticationDatabase admin --ssl --username cshub-db-resource --password Firethedesire
+
+
+register_details
+
+
+<nav class="z-depth-1 theme-color-dark-primary center"><div class="nav-wrapper"><div class="container"><span class="theme-text-light-primary">Student Section</span></div></div></nav>
+                  
+                  <div class="col s12">
+                    <nav class="theme-color-light-primary z-depth-0">
+                      <span class="theme-text-dark-primary">Login Details</span>
+                    </nav>
+                  </div>
+                  
+                  <div class="input-field col s12">
+                    <input id="student_email" type="email" class="validate">
+                    <label for="student_email">Email address</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input id="student_password" type="password">
+                    <label for="student_password">New Password</label>
+                  </div>
+                  
+                  <div class="input-field col s12">
+                    <input id="student_re_password" type="password" onblur="validate_password()">
+                    <label for="student_re_password">Retype password</label>
+                  </div>
+
+                  <div id="password_error_message" class="col s12">
+                  </div>
+
+                  <div class="col s12">
+                    <nav class="theme-color-light-primary z-depth-0">
+                      <span class="theme-text-dark-primary">Personal details</span>
+                    </nav>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input id="student_name" type="text">
+                    <label for="student_name">Name</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input id="student_roll_no" type="text" onblur="validate_roll_no()">
+                    <label for="student_roll_no">Roll number (optional)</label>
+                  </div>
+
+                  <div id="roll_no_error_message" class="col s12">
+                  </div>
+
+
+                  <div class="col s12">
+                    <span class="theme-text-dark-primary">Profile picture (square pics are better)</span>
+                    <br>
+                    <span style="color: #d1d1d1;">Image preview</span>
+                    <div class="row valign-center">
+                      <div class="col s6">
+                        <div class="card theme-color-light-primary z-depth-0">
+                          <div class="card-content">                            
+                            <img id="square_profile_pic_preview" class="materialboxed responsive-img" width="200px" height="200px" src="images/cshublogo.png">      
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s4 offset-s1">
+                        <div class="card theme-color-light-primary z-depth-0 valign-center">
+                          <div class="card-content">
+                            <img id="circle_profile_pic_preview" class="materialboxed responsive-img circle" width="200px" height="200px" src="images/cshublogo.png"> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form action="#">
+                    <div class="file-field input-field">
+                      <div class="z-depth-0 waves-effect waves-theme-color-light-primary btn theme-color-dark-primary theme-text-light-primary">
+                        <span>UPLOAD</span>
+                        <input name="file" type="file" class="cloudinary-fileupload" data-cloudinary-field="image_id" data-form-data="{ &quot;upload_preset&quot;:  &quot;cshub-resource-unsigned&quot;, &quot;callback&quot;: &quot;https://127.0.0.1:8888/cloudinary_cors.html&quot;}"></input>
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                  </form>
+                  </div>
+                  
+                  <div class="input-field col s12">
+                    <select id="a_l_type">
+                      <option value="" disabled selected>Choose</option>
+                      <option value="1">Alumnus</option>
+                      <option value="2">Current</option>
+                    </select>
+                    <label>Alumnus or Current</label>
+                  </div>
+
+                  <div id="inner_personal_details">
+                  </div>
+
+                  <div class="col s12">
+                    <nav class="theme-color-light-primary z-depth-0">
+                      <span class="theme-text-dark-primary">Additional details</span>
+                    </nav>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Work/Intern experience</span>
+                    <a onclick="add_work_intern_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="work_intern_details">
+                    <br>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Areas of Interest</span>
+                    <a onclick="add_area_of_interest_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="area_of_interest_details">
+                      <br>        
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Projects done</span>
+                    <a onclick="add_projects_done_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="projects_done_details">
+                      <br>        
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Site for yourself</span>
+                    <a onclick="add_site_for_yourself_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="own_site_details">
+                      <br>        
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Connections</span>
+                    <a onclick="add_connections_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="Connections_details">
+                      <br>
+                    </div>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input id="about_yourself" type="text">
+                    <label for="about_yourself">About youself</label>
+                  </div>
+                
+                  <div id="register_errors">
+                    
+                  </div>
+
+                <div class="col s10 offset-s1">
+                  <div class="center">
+                    <br>
+                    <a href="#!" class="z-depth-1 waves-effect waves-theme-color-light-primary btn theme-text-light-primary theme-color-dark-primary" onclick="validate_register()">Register</a>
+                    <br><br>
+                  </div>
+                </div>
+
+
+
+
+interpersonal_details
+
+                    <div id="course" class="input-field col s12">
+                      <select id="course_type">
+                        <option value="99" disabled selected>Choose</option>
+                        <option value="1">Bachelors</option>
+                        <option value="2">Masters</option>
+                        <option value="3">Others</option>
+                      </select>
+                      <label>Course</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                      <select id="starting_year">
+                        <option value="99" disabled selected>Choose</option>
+                        <option value="1">Bachelors</option>
+                        <option value="2">Masters</option>
+                        <option value="3">Others</option>
+                      </select>
+                      <label>Starting year</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                      <select id="ending_year">
+                        <option value="99" disabled selected>Choose</option>
+                        <option value="1">Bachelors</option>
+                        <option value="2">Masters</option>
+                        <option value="3">Others</option>
+                      </select>
+                      <label>Ending year</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <input id="current_location" type="text">
+                      <label for="current_location">Current location</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <input id="current_company" type="text">
+                      <label for="current_company">Company currently working in (optional)</label>
+                    </div>
+
+
+work_intern details
+
+                      <ul>
+                        <li>
+                          <div class="input-field col s2">
+                            <select id="work_intern_drop[i]">
+                              <option value="" disabled selected>Choose</option>
+                              <option value="1">Intern</option>
+                              <option value="2">Work</option>
+                            </select>
+                            <label>Type</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="input-field col s10">
+                            <input id="work_intern_text[i]" type="text">
+                            <label for="work_intern_text[i]">Where</label>
+                          </div>
+                        </li>
+                      </ul>
+
+
+
+                      area of interest details
+
+                      <div class="input-field col s12">
+                        <input id="area_of_interest_text[i]" type="text">
+                        <label for="area_of_interest_text[i]">Domain name</label>
+                      </div>
+
+                      projects done details
+
+                      <div class="input-field col s12">
+                        <input id="projects_done_text[i]" type="text">
+                        <label for="projects_done_text[i]">Name</label>
+                      </div>
+
+                      own site details
+
+                      <div class="input-field col s12">
+                        <input id="own_site_text[i]" type="text">
+                        <label for="own_site_text[i]">Site url</label>
+                      </div>
+
+                      connection details
+
+                      <ul>
+                        <li>
+                          <div class="input-field col s2">
+                            <select id="Connections_drop[i]">
+                              <option value="" disabled selected>Choose</option>
+                              <option value="1">facebook</option>
+                              <option value="2">Linkedin</option>
+                              <option value="3">Quora</option>
+                              <option value="4">Github</option>
+                              <option value="5">Coding profile</option>
+                            </select>
+                            <label>Type</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="input-field col s10">
+                            <input id="Connections_text[i]" type="text">
+                            <label for="Connections_text[i]">url</label>
+                          </div>
+                        </li>
+                      </ul>
+
+
+teachers section
+
+<nav class="z-depth-1 theme-color-dark-primary center"><div class="nav-wrapper"><div class="container"><span class="theme-text-light-primary">Teacher Section</span></div></div></nav>
+                  
+                  <div class="col s12">
+                    <nav class="theme-color-light-primary z-depth-0">
+                      <span class="theme-text-dark-primary">Login Details</span>
+                    </nav>
+                  </div>
+                  
+                  <div class="input-field col s12">
+                    <input id="teacher_email" type="email" class="validate">
+                    <label for="teacher_email">Email address</label>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input id="teacher_password" type="password">
+                    <label for="teacher_password">New Password</label>
+                  </div>
+                  
+                  <div class="input-field col s12">
+                    <input id="teacher_re_password" type="password" onblur="validate_password()">
+                    <label for="teacher_re_password">Retype password</label>
+                  </div>
+
+                  <div id="password_error_message" class="col s12">
+                  </div>
+
+                  <div class="col s12">
+                    <nav class="theme-color-light-primary z-depth-0">
+                      <span class="theme-text-dark-primary">Personal details</span>
+                    </nav>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input id="teacher_name" type="text">
+                    <label for="teacher_name">Name</label>
+                  </div>
+
+                  <div class="col s12">
+                    <span class="theme-text-dark-primary">Profile picture (square pics are better)</span>
+                    <br>
+                    <span style="color: #d1d1d1;">Image preview</span>
+                    <div class="row valign-center">
+                      <div class="col s6">
+                        <div class="card theme-color-light-primary z-depth-0">
+                          <div class="card-content">                            
+                            <img id="square_profile_pic_preview" class="materialboxed responsive-img" width="200px" height="200px" src="images/cshublogo.png">      
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s4 offset-s1">
+                        <div class="card theme-color-light-primary z-depth-0 valign-center">
+                          <div class="card-content">
+                            <img id="circle_profile_pic_preview" class="materialboxed responsive-img circle" width="200px" height="200px" src="images/cshublogo.png"> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <form action="#">
+                    <div class="file-field input-field">
+                      <div class="z-depth-0 waves-effect waves-theme-color-light-primary btn theme-color-dark-primary theme-text-light-primary">
+                        <span>UPLOAD</span>
+                        <input id="teacher_profile_pic" type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                  </form>
+                  </div>
+                  
+                  <div id="inner_personal_details">
+
+                    <div class="input-field col s6">
+                      <select id="teacher_starting_year">
+                        <option value="99" disabled selected>Choose</option>
+                      </select>
+                      <label>Starting year</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                      <select id="teacher_ending_year">
+                        <option value="99" disabled selected>Choose</option>
+                      </select>
+                      <label>Ending year</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <input id="teacher_degrees" type="text">
+                      <label for="teacher_degrees">Degrees</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <input id="teacher_designation" type="text">
+                      <label for="teacher_designation">Designation</label>
+                    </div>
+                  
+                  </div>
+
+                  <div class="col s12">
+                    <nav class="theme-color-light-primary z-depth-0">
+                      <span class="theme-text-dark-primary">Additional details</span>
+                    </nav>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Areas of Interest</span>
+                    <a onclick="add_teacher_area_of_interest_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="area_of_interest_details">
+                      <br>        
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Projects done</span>
+                    <a onclick="add_teacher_projects_done_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="projects_done_details">
+                      <br>        
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Site for yourself</span>
+                    <a onclick="add_teacher_site_for_yourself_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="own_site_details">
+                      <br>        
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="theme-text-dark-primary">Connections</span>
+                    <a onclick="add_teacher_connections_field()" class="right z-depth-0 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary"><i class="material-icons theme-text-dark-primary">add</i></a>
+                    <div id="Connections_details">
+                      <br>
+                    </div>
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input id="teacher_about_yourself" type="text">
+                    <label for="teacher_about_yourself">About youself</label>
+                  </div>
+                
+                  <div id="register_errors">
+                    
+                  </div>
+
+                <div class="col s10 offset-s1">
+                  <div class="center">
+                    <br>
+                    <a href="#" class="z-depth-1 waves-effect waves-theme-color-light-primary btn theme-text-light-primary theme-color-dark-primary">Register</a>
+                    <br><br>
+                  </div>
+                </div>
+
+
+                teachers projects done details
+                      <div class="input-field col s12">
+                        <input id="projects_done_domain_text[i]" type="text">
+                        <label for="projects_done_domain_text[i]">Name</label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input id="projects_done_text[i]" type="text">
+                        <label for="projects_done_text[i]">Name</label>
+                      </div>
+
+account cicle dynamic
+
+          <ul id="account_circle" class='dropdown-content'>
+            <li><a href="/sign_in" class="theme-text-dark-primary">Sign up</a></li>
+            <li><a href="/sign_in" class="theme-text-dark-primary">Login</a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="#!" class="dropdown-button" data-activates="account_circle"><i class="material-icons">account_circle</i></a></li>
+          </ul>
+          
+          <ul id="user_circle" class='dropdown-content'>
+            <li><a href="#!" class="theme-text-dark-primary" onclick="logout_user()">Log out</a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="#!" class="dropdown-button" data-activates="user_circle"><img class="responsive-img z-depth-6 circle" src="images/cshublogo.png" style="height: 30px; width: 30px;   margin-top: 17px"></a></li>
+          </ul>
+
+teacher ds
+      var area_of_interest_details = {
+        'domain_name' : ""
+      };
+      var projects_done_details = {
+        'domain_name' : "",
+        'name' : ""
+      };
+      var own_site_details = {
+        'url' : "",
+      };
+      var connections_details = {
+        'type' : "",
+        'url' : ""
+      };
+
+student ds
+      var work_intern_details = {
+        'type' : "",
+        'where' : "" 
+      };
+      var area_of_interest_details = {
+        'domain_name' : ""
+      };
+      var projects_done_details = {
+        'name' : ""
+      };
+      var own_site_details = {
+        'url' : "",
+      };
+      var connections_details = {
+        'type' : "",
+        'url' : ""
+      };
+
+
+
+
+    $.cookie("cshub_user_email_id", "anand@gmail.com", { path: '/'});
+    $.cookie("cshub_user_password", "pitti", { path: '/'});
+
+    alert($.cookie("cshub_user_email_id"));
+
+
+
+//user profile contents
+
+        <div class="col s12 m5">
+          <div class="card transparent z-depth-4">
+              <div class="card-image">
+              <img id="profile_pic" class="responsive-img" src="images/one.jpg">
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m7">
+          <div class="card transparent z-depth-0">
+            <div class="card-content">
+                <br class="hide-on-med-and-down">
+                <br class="hide-on-med-and-down">
+                <span class="card-title theme-text-dark-primary" style="font-size: 40px;">Anand Pitti</span>
+                <br >
+                <ul id="school" class="col s12" style="color: #505050;">
+                  <li class="left" ><i class="material-icons Tiny">school</i></li>
+                  <li class="left"><span style="color: #505050;">&nbsp;&nbsp;2014-2018</span></li>
+                </ul>
+              
+                <a href="https://anand_site.com"><ul id="ownsite" class="col s12" style="color: #505050;">
+                  <li class="left"><i class="material-icons Tiny">public</i></li>
+                  <li class="left" style="color: #505050;">&nbsp;&nbsp;anand_site</li>
+                </ul></a>
+
+                <ul id="work" class="col s12" style="color: #505050;">
+                  <li class="left"><i class="material-icons Tiny">work</i></li>
+                  <li class="left" style="color: #505050;"><span>&nbsp;&nbsp;Microsoft.Inc</span></li>
+                </ul>
+
+                <ul id="connect" class="col s12">
+                  <li class="left"><span style="color: #505050;">Connect through</span></li>
+                  <li class="left"><a href="">&nbsp;&nbsp;<img class="responsive-img" src="images/githubmini.png" style="height: 25px; width: 25px;"></i></a></li>
+                  <li class="left"><a href="">&nbsp;&nbsp;<img class="responsive-img" src="images/facebookmini.png" style="height: 25px; width: 25px;"></i></a></li>
+                  <li class="left"><a href="">&nbsp;&nbsp;<img class="responsive-img" src="images/linkedinmini.png" style="height: 25px; width: 25px;"></i></a></li>
+                  <li class="left"><a href="">&nbsp;&nbsp;<img class="responsive-img" src="images/codingmini.png" style="height: 25px; width: 25px;"></i></a></li>
+                  <li class="left"><a href="">&nbsp;&nbsp;<img class="responsive-img" src="images/twittermini.png" style="height: 25px; width: 25px;"></i></a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m12">
+            <div class="card transparent z-depth-0">
+              <div class="card-content">
+                <span class="card-title theme-text-dark-primary"><b><span>About myself</span></b></span>
+                <p style="color: #505050;">hello amigo welcome to da da adadadadadadada</p>
+              </div>
+            </div>
+            <div class="card transparent z-depth-0">
+              <div class="card-content">
+                <span class="card-title theme-text-dark-primary"><b><span>Work/Intern experience</span></b></span>
+                <p style="color: #505050;">hello amigo</p>
+              </div>
+            </div>
+            <div class="card transparent z-depth-0">
+              <div class="card-content">
+                <span class="card-title theme-text-dark-primary"><b><span>Areas of interest</span></b></span>
+                <p style="color: #505050;">hello amigo</p>
+              </div>
+            </div>
+            <div class="card transparent z-depth-0">
+              <div class="card-content">
+                <span class="card-title theme-text-dark-primary"><b><span>Projects done</span></b></span>
+                <p style="color: #505050;">hello amigo</p>
+              </div>
+            </div>
+        </div>
+
+
+contacts ds
+
+{
+"name" : "Muthu Thillai Natrajan",
+"email_id" : "muthu@gmail.com",
+"phone_number" : "+91 12121 21212"
+"designation" : "CSEA Chariman"
+"v_pic_url" : "images/test1.jpg"
+"h_pic_url" : "images/anand3.jpg"
+}
+
+heights
+<!--  style="height: 200px; width: 150px" -->
+<!--  style="height: 155px; width: 325px" -->
+<!--  style="height: 250px; width: 520px" -->
+
+
+contact template code
+
+          <div class="col s12 m6">
+            <div class="card horizontal hide-on-med-and-down">
+              <div class="card-image">
+                <!--  style="height: 200px; width: 150px" -->
+                <img class="responsive-img" src="images/test1.jpg">
+              </div>
+                <div class="card-stacked">
+                <div class="card-content">
+                  <span class="card-title theme-text-dark-primary">Muthu Thillai Natrajan</span>
+                  <p>muthuthillai@gmail.com</p>
+                  <p>+91 1234567890</p>
+                </div>
+              <div class="card-action">
+                <span class="theme-text-dark-primary">CSEA Chariman</span>
+              </div>
+              </div>
+            </div>
+            <div class="card hide-on-large-only">
+              <div class="card-image">
+                <!--  style="height: 155px; width: 325px" -->
+                <!--  style="height: 250px; width: 520px" -->
+                <img class="responsive-img" src="images/anand3.jpg">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <span class="card-title theme-text-dark-primary">Muthu Thillai Natrajan</span>
+                  <p>muthuthillai@gmail.com</p>
+                  <p>+91 1234567890</p>
+                </div>
+              <div class="card-action">
+                <span class="theme-text-dark-primary">CSEA Chariman</span>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+
+-----------------opportunities-------------------------------
+
+research and dept proj ds
+
+{
+"title_on_card" : "topic and short description",
+"project_head" : "project head name",
+"other_members" : ["guy 1", "guy 2", "guy 3", "guy 4", "guy 5"],
+"main_tags" : ["core 1", "core 2", "core 3"],
+"other_tags" : ["tag 1", "tag 2", "tag 3", "tag 4"],
+"current_state" : "Active",
+"created_date_time" : "11/11/2017 09:00 PM",
+"title" : "project title",
+"description" : "this is the project short description",
+"language" : "python",
+"link" : "http:/github.com/Anandpitti"                
+}
+
+
+intern and job ds
+
+{
+"company_name" : "company name",
+"location" : "location",
+"time_period" : "period of intern",
+"poster_name" : "poster name",
+"current_state" : "Active",
+"created_date_time" : "11/11/2017 09:00 PM",
+"type" : "Intern type",
+"description" : "this is the project short description",
+"contact_mail_id" : "poster@gmail.com",
+"language" : ["python", "java"],
+"technical" : ["algo", "network"],
+"tags" : ["tag 1", tag2]
+}
+
+
+research and dept Projects
+
+          <ul class="collapsible" data-collapsible="accordion">
+            
+            <li class="col s12">
+                <div class="collapsible-header">
+                  <ul class="col s12 m12 l12">
+                    <li>
+                      Topic and short description
+                    </li>
+                    <li>
+                      <hr class="theme-text-dark-primary">  
+                    </li>
+                    <li>
+                      <div class="chip">
+                      Owner or project head name
+                    </div>
+                      <span class="new badge blue" data-badge-caption="">core 1</span>
+                      <span class="new badge red hide-on-small-only" data-badge-caption="">core 2</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-body">
+                    <span>Current State: <span class="red-text darken-4">Completed</span></span>
+                    <span class="right hide-on-small-only">Created on 11/11/2017 09:00 PM</span>
+
+                    <div class="card theme-color-dark-primary z-depth-0">
+                      <div class="card-content">
+                        <span class="card-title theme-text-light-primary"><span>Project title</span></span>
+                        <span class="theme-text-light-primary">
+                          <p>This is the project short description</p>
+                          <p>We are working for ...</p>
+                        </span>
+                      </div>
+                  </div>
+                  
+                  <span class="theme-text-black">Project head</span>
+                  <a href="javascript:show_profile('Project head name')"><span class="theme-text-dark-primary">Project head name</span></a>
+                  <br><br>
+                  
+                  <span class="theme-text-black">Others working in this project</span><br>
+                    <a href="javascript:show_profile('guy 1')"><span class="theme-text-black">guy 1</span></a>&nbsp;&nbsp;
+                    <a href="javascript:show_profile('guy 2')"><span class="theme-text-black">guy 2</span></a>&nbsp;&nbsp;
+                    <a href="javascript:show_profile('guy 3')"><span class="theme-text-black">guy 3</span></a>&nbsp;&nbsp;
+                    <a href="javascript:show_profile('guy 4')"><span class="theme-text-black">guy 4</span></a>&nbsp;&nbsp;
+                    <a href="javascript:show_profile('guy 5')"><span class="theme-text-black">guy 5</span></a>&nbsp;&nbsp;
+                    <a href="javascript:show_profile('guy 6')"><span class="theme-text-black">guy 6</span></a>&nbsp;&nbsp;
+                  <br><br>
+
+                  <span class="theme-text-black">Language </span>
+                  <span class="theme-text-dark-primary">Python</span>
+                  <br><br>
+
+                  <span class="theme-text-black">You can follow our work at </span>
+                  <a href="http://github.com/link"><span>github link</span></a>
+                  <span> or contact us at professor email id for more details.</span>
+                  <br><br>
+                  
+                  <div class="chip">tag 1</div>
+                  <div class="chip">tag 2</div>
+                  <div class="chip">tag 3</div>
+                  <div class="chip">tag 4</div>
+                  <div class="chip">tag 5</div>
+                </div>
+            </li>
+
+          </ul>
+
+
+intern div
+
+          <ul class="collapsible" data-collapsible="accordion">
+            
+            <li class="col s12">
+                <div class="collapsible-header">
+                  <ul class="col s12 m12 l12">
+                    <li>
+                      Company name, Location
+                    </li>
+                    <li>
+                      <hr class="theme-text-dark-primary">  
+                    </li>
+                    <li>
+                      <div class="chip">
+                      poster of this msg
+                    </div>
+                      <span class="new badge blue" data-badge-caption="">period of intern</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-body">
+                    <span>Current State: <span class="green-text darken-4">Open</span></span>
+                    <span class="right hide-on-small-only">Created on 11/11/2017 09:00 PM</span>
+
+                    <div class="card theme-color-dark-primary z-depth-0">
+                      <div class="card-content">
+                        <span class="card-title theme-text-light-primary"><span>Intern type (eg, Research intern, Sde intern, Dev Ops etc.)</span></span>
+                        <span class="theme-text-light-primary">
+                          <p>This is the short description</p>
+                        </span>
+                      </div>
+                  </div>
+                  
+                  <span class="theme-text-black">Contact mail id</span>
+                  <span class="theme-text-dark-primary">postermailid@gmail.com</span>
+                  <br><br>
+
+                  <span class="theme-text-black">Languages preferred</span><br>
+                  <span class="theme-text-dark-primary">
+                    Python<br>
+                    Java
+                  </span>
+                  <br><br>
+
+                  <span class="theme-text-black">Technicals preferred</span><br>
+                  <span class="theme-text-dark-primary">
+                    Algorithms<br>
+                    Compilers<br>
+                    networks
+                  </span>
+                  <br><br>
+                  
+                  <div class="chip">tag 1</div>
+                  <div class="chip">tag 2</div>
+                </div>
+            </li>
+            
+          </ul>
+
+job related div
+
+<ul class="collapsible" data-collapsible="accordion">
+            
+            <li class="col s12">
+                <div class="collapsible-header">
+                  <ul class="col s12 m12 l12">
+                    <li>
+                      Company name, Location
+                    </li>
+                    <li>
+                      <hr class="theme-text-dark-primary">  
+                    </li>
+                    <li>
+                      <div class="chip">
+                      poster of this msg
+                    </div>
+                      <span class="new badge blue" data-badge-caption="">Oct 6</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-body">
+                    <span>Current State: <span class="green-text darken-4">Open</span></span>
+                    <span class="right hide-on-small-only">Created on 11/11/2017 09:00 PM</span>
+
+                    <div class="card theme-color-dark-primary z-depth-0">
+                      <div class="card-content">
+                        <span class="card-title theme-text-light-primary"><span>Job type (eg, SDE, Dev Ops, IT management, etc.)</span></span>
+                        <span class="theme-text-light-primary">
+                          <p>This is the short description</p>
+                        </span>
+                      </div>
+                  </div>
+                  
+                  <span class="theme-text-black">Contact mail id</span>
+                  <span class="theme-text-dark-primary">postermailid@gmail.com</span>
+                  <br><br>
+
+                  <span class="theme-text-black">Languages preferred</span><br>
+                  <span class="theme-text-dark-primary">
+                    Python<br>
+                    Java
+                  </span>
+                  <br><br>
+
+                  <span class="theme-text-black">Technicals preferred</span><br>
+                  <span class="theme-text-dark-primary">
+                    Algorithms<br>
+                    Compilers<br>
+                    networks
+                  </span>
+                  <br><br>
+                  
+                  <div class="chip">tag 1</div>
+                  <div class="chip">tag 2</div>
+                </div>
+            </li>
+            
+          </ul>
+
+
+top fill
+
+<span class="theme-text-dark-primary">TIMELINE </span>        
+        <form action="#" class="col s10 m10 right">
+          <div class="range-field">
+            <input type="range" id="test5" min="0" max="50" style="margin: 2px;"/>
+          </div>
+        </form>
+
+
+image_ thumbnail ds
+
+{
+"year" : 2017,
+"name" : "abacus 2k17",
+"title_img_url" : "images/anand.jpeg"
+}
+
+
+image_ thumbnail contetns
+
+        <div class="fixed-action-btn">
+          <div id="top_fill_timeline" class="col s12 m12 offset-m1 center hide-on-med-and-down">
+            <span class="theme-text-dark-primary">TIMELINE </span>        
+            <form action="#" class="col s12 m12">
+              <div class="range-field">
+                <input id="rangebar" type="range" min="1900" max="2100" style="margin: 2px;"/>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <nav class="transparent z-depth-0">
+        </nav>
+
+        <div id="image_thumbnails_div" class="col s12 m10 l8 offset-m1">
+        ----------------to be filled dynamically-------------
+          <div id="year_2017_div" class="col s12 m12">
+            <span class="col s12 m12 theme-text-ash" style="font-size: 25px;">
+              <b>2017</b>
+            </span>
+          
+          <!-- img size 140px height to 190px width -->
+
+            <div class="col s10 m3 offset-s1">
+              <a href="javascript:show_gallery_individual('hello')">
+              <div class="card transparent z-depth-2">
+                <div class="card-image">
+                  <img src="images/sample.jpg">
+                </div>
+                <div class="card-action center theme-text-dark-primary">
+                  <span>hello</span>
+                </div>
+              </div>
+              </a>
+            </div>
+
+          </div>
+          ---------------------------------------------------
+        </div>
+
+        <div id="important_event_div" class="col m2 hide-on-med-and-down">
+        ---------to be filled dynamically-------------
+          <div style="height: 1px;" class="pinned">
+            <ul class="section table-of-contents">
+              <li><span class="theme-text-dark-primary">Important events</span></li>
+              <li><a href="#abacus2k17_div">Abacus 2k17</a></li>
+              <li><a href="#sync2k17_div">Sync 2k17</a></li>
+              <li><a href="#freshersday2k17_div">Freshers Day 2k17</a></li>
+              <li><a href="#abacus2k16_div">Abacus 2k16</a></li>
+            </ul>
+          </div>
+          ----------------------------------------------------
+        </div>
+
+
+individual event all images ds
+
+{
+"event_name" : "abacus 2k17",
+"img_url" : "images/anand.jpeg"
+}
+
+individual event all images page
+
+        <nav class="transparent z-depth-0">
+        </nav>
+
+        <div class="col s12 m9 offset-m1 center">
+          <a href="javascript:show_gallery_home()" class="waves-red left theme-text-ash">
+            <i class="material-icons">arrow_back</i>
+          </a>
+          <span class="theme-text-black">Coursel</span>
+        </div>
+
+        <div class="col s1 m1 offset-m1 hide-on-small-only" style="margin-top: 140px;">
+          <a href="#!" id="show_prev_img" class="waves-red left theme-text-ash">
+            <i class="material-icons medium">chevron_left</i>
+          </a>
+        </div>
+
+        <div class="col s12 m7">
+          <div id="img_corousel" class="carousel">
+            <a class="carousel-item" href=""><img src="images/anand.jpeg"></a>
+            <a class="carousel-item" href=""><img src="images/anand1.jpg"></a>
+            <a class="carousel-item" href=""><img src="images/anand2.jpg"></a>
+            <a class="carousel-item" href=""><img src="images/anand3.jpg"></a>
+            <a class="carousel-item" href=""><img src="images/sample.jpg"></a>
+          </div>
+        </div>
+
+        <div class="col s1 m1 hide-on-small-only" style="margin-top: 140px;">
+          <a href="#!" id="show_next_img" class="waves-red left theme-text-ash">
+            <i class="material-icons medium">chevron_right</i>
+          </a>
+        </div>
+
+        <div class="col s12 m9 offset-m1 center">
+          <span class="theme-text-black">All images</span>
+        </div>
+
+        <div id="all_images_div" class="col s12 m9 offset-m1">
+
+          <div class="col s12 m6">
+            <div class="col s6 m6">
+              <div class="card transparent z-depth-2">
+                <div class="card-image">
+                  <img src="images/sample.jpg">
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m6">
+              <div class="card transparent z-depth-2">
+                <div class="card-image">
+                  <img src="images/sample.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="col s6 m6">
+              <div class="card transparent z-depth-2">
+                <div class="card-image">
+                  <img src="images/sample.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+posts types
+
+simple text post---------------------------------------------------------
+
+{
+"type" : "simple text",
+"posted_by" : "Anand Pitti",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"post_text" : "hey! hear this funny pun about loops. <p><b>\"When others just do, you can do while\"</b></p>",
+"tags" : ["pun love","geek","entertainment"]
+}
+
+<div class="">
+  <div class="card" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85)">
+        <div class="card-content">
+            <div>
+              <img id="post_i_user_img" src="" class="responsive-img circle left" style="height: 30px;">
+              <span style="font-size: 20px;">Anand pitti</span>
+              <span class="theme-text-ash">has written a post</span>
+              <span class="right theme-text-ash hide-on-small-only" style="font-size: 10px;"><i class="material-icons tiny right">query_builder</i>3:37 pm</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <ul>
+                    <li>
+                      hey! hear this funny pun about loops. <p><b>"When others just do, you can do while"</b></p>
+                    </li>
+                    <li>
+                        <div class="chip">pun love</div>
+                      <div class="chip">geek</div>
+                      <div class="chip">Entertainment</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+  </div>
+</div>
+
+many pictures share post
+
+{
+"type" : "pictures",
+"posted_by" : "Anand Pitti",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"post_text" : "hey! hear this funny pun about loops. <p><b>\"When others just do, you can do while\"</b></p>",
+"img_urls" : ["images/sample.jpg","images/sample.jpg","images/sample.jpg","images/sample.jpg"]
+}
+
+<div class="">
+  <div class="card" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85)">
+      <div class="card-content">
+          <div>
+            <img id="post_i_user_img" src="" class="responsive-img circle left" style="height: 30px;">
+            <span style="font-size: 20px;">Anand pitti</span>
+            <span class="theme-text-ash">has written a post</span>
+            <span class="right theme-text-ash hide-on-small-only" style="font-size: 10px;"><i class="material-icons tiny right">query_builder</i>3:37 pm</span>
+          </div>
+          <div style="margin-top: 10px;">
+            <ul>
+                  <li>
+                    Here are some candid pics taken during Sync'17.
+                    <p>Photogrpher expert: <a href="javascript:show_profile('Harish kumar')"><b>Harish kumar</b></a></p>
+                  </li>
+                  <li>
+                    <hr>
+                    <div>
+                      <a href="images/anand.jpeg"><img src="images/anand.jpeg" style="height:100px; width: auto; margin: 10px;"></a>
+                      <a href="images/anand.jpeg"><img class="hide-on-small-only" src="images/anand.jpeg" style="height:100px; width: auto; margin: 10px;"></a>
+                      <a href="images/anand.jpeg"><img class="hide-on-small-only"src="images/anand.jpeg" style="height:100px; width: auto; margin: 10px;"></a>
+                      <a href="images/anand.jpeg"><img class="hide-on-med-and-down" src="images/anand.jpeg" style="height:100px; width: auto; margin: 10px;"></a>
+                      <i class="material-icons large" style="opacity: 0.6">add</i>  
+                    </div>
+                    <hr>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="card-action center">
+          <a href="#!" class="theme-text-ash activator">for more details</a>
+        </div>
+        <div class="card-reveal">
+      <ul>
+                <li>
+                  <a href="#!"><i class="material-icons right theme-text-ash">close</i></a>
+                    Here are some candid pics taken during Sync'17.
+                    <p>Photogrpher expert: <a href="javascript:show_profile('Harish kumar')"><b>Harish kumar</b></a></p>
+                </li>
+                <li>
+                  <div id="all_images_div" class="">
+
+                        <div class="col s12 m6">
+                          <div class="col s6 m6">
+                            <div class="card transparent z-depth-2">
+                              <div class="card-image">
+                                <a href="images/sample.jpg"><img src="images/sample.jpg"></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col s6 m6">
+                            <div class="card transparent z-depth-2">
+                              <div class="card-image">
+                                <a href="images/sample.jpg"><img src="images/sample.jpg"></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col s12 m6">
+                          <div class="col s6 m6">
+                            <div class="card transparent z-depth-2">
+                              <div class="card-image">
+                                <a href="images/sample.jpg"><img src="images/sample.jpg"></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                  </div>
+                </li>
+                <li>
+                  <span class="theme-text-ash">Posted by Anand Pitti at 3:37 pm, Nov, 2017.</span>
+                </li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+project addition post------------------------------------------------------------
+
+{
+"type" : "project add",
+"posted_by" : "Anand Pitti",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"title_on_card" : "topic and short description",
+"project_head" : "project head name",
+"other_members" : ["guy 1", "guy 2", "guy 3", "guy 4", "guy 5"],
+"main_tags" : ["core 1", "core 2", "core 3"],
+"other_tags" : ["tag 1", "tag 2", "tag 3", "tag 4"],
+"current_state" : "Active",
+"created_date_time" : "11/11/2017 09:00 PM",
+"title" : "project title",
+"description" : "this is the project short description",
+"language" : "python",
+"link" : "http:/github.com/Anandpitti"
+}
+
+<div class="#">
+  <div class="card" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85)">
+        <div class="card-content">
+            <div>
+              <img src="" class="responsive-img circle left" style="height: 30px;">
+              <span style="font-size: 20px;">Anand pitti</span>
+              <span class="theme-text-ash">has added a project</span>
+              <span class="right theme-text-ash hide-on-small-only" style="font-size: 10px;"><i class="material-icons tiny right">query_builder</i>3:37 pm</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <ul>
+                <li>
+                        <div class="chip">
+                          headed by Rajeshwari Sridhar
+                      </div>
+                      <span class="new badge blue" data-badge-caption="">DIY</span>
+                      <span class="new badge red hide-on-small-only" data-badge-caption="">modeling</span>
+                    </li>
+
+                    <li>
+                      Finite automata constuction using Cardboard, DIY project
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-action center">
+            <a href="#!" class="theme-text-ash activator">for more details</a>
+          </div>
+          <div class="card-reveal">
+        <a href="#!"><i class="material-icons right theme-text-ash">close</i></a>
+        <div class="">
+                  <span>Current State: <span class="red-text darken-4">Completed</span></span>
+                  <span class="right hide-on-small-only">Created on 11/11/2017 09:00 PM</span>
+
+                  <div class="card theme-color-dark-primary z-depth-0">
+                    <div class="card-content">
+                      <span class="card-title theme-text-light-primary"><span>Project title</span></span>
+                      <span class="theme-text-light-primary">
+                        <p>This is the project short description</p>
+                        <p>We are working for ...</p>
+                      </span>
+                    </div>
+                </div>
+                
+                <span class="theme-text-black">Project head</span>
+                <a href="javascript:show_profile('Project head name')"><span class="theme-text-dark-primary">Project head name</span></a>
+                <br><br>
+                
+                <span class="theme-text-black">Others working in this project</span><br>
+                  <a href="javascript:show_profile('guy 1')"><span class="theme-text-black">guy 1</span></a>&nbsp;&nbsp;
+                  <a href="javascript:show_profile('guy 2')"><span class="theme-text-black">guy 2</span></a>&nbsp;&nbsp;
+                  <a href="javascript:show_profile('guy 3')"><span class="theme-text-black">guy 3</span></a>&nbsp;&nbsp;
+                  <a href="javascript:show_profile('guy 4')"><span class="theme-text-black">guy 4</span></a>&nbsp;&nbsp;
+                  <a href="javascript:show_profile('guy 5')"><span class="theme-text-black">guy 5</span></a>&nbsp;&nbsp;
+                  <a href="javascript:show_profile('guy 6')"><span class="theme-text-black">guy 6</span></a>&nbsp;&nbsp;
+                <br><br>
+
+                <span class="theme-text-black">Language </span>
+                <span class="theme-text-dark-primary">Python</span>
+                <br><br>
+
+                <span class="theme-text-black">You can follow our work at </span>
+                <a href="http://github.com/link"><span>github link</span></a>
+                <span> or contact us at professor email id for more details.</span>
+                <br><br>
+                
+                <div class="chip">tag 1</div>
+                <div class="chip">tag 2</div>
+                <div class="chip">tag 3</div>
+                <div class="chip">tag 4</div>
+                <div class="chip">tag 5</div>
+              </div>
+              <span class="theme-text-ash">Posted by Anand Pitti at 3:37 pm, Nov, 2017.</span>
+      </div>
+  </div>
+</div>
+
+poster share post-----------------------------------------------------
+
+{
+"type" : "poster",
+"title" : "Teachers Day",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"quote_text" : "A good teacher can inspire hope, ignite the imagination, and instill a love of learning",
+"additional_text" : "We can add more additional info like a writeup or link for other pages events sort of here.",
+"img_url" : "images/sample.jpg"
+}
+
+<div class="">
+  <div class="card" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85)">
+        <div class="card-content">
+            <div class="card transparent z-depth-0">
+              <div class="card-content center">
+                <span class="card-title theme-text-dark-primary">Teachers Day</span>
+                <p class="theme-text-ash">"A good teacher can inspire hope, ignite the imagination, and instill a love of learning"</p>
+              </div>
+            </div>
+            <div class="card transparent z-depth-0">
+              <div class="card-image z-depth-2 center">
+                  <img src="images/sample.jpg">
+                </div>
+                <div class="card-content">
+                  <p class="theme-text-ash">We can add more additional info like a writeup or link for other pages events sort of here.</p>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+video lecture post / video share post----------------------------------------------------
+
+{
+"type" : "video post",
+"posted_by" : "Anand Pitti",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"post_text" : "",
+"tags" : ["core1","core2"],
+"vid_url" : "//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
+}
+
+<div class="">
+  <div class="card" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85)">
+        <div class="card-content">
+            <div>
+              <img id="post_i_user_img" src="#" class="responsive-img circle left" style="height: 30px;">
+              <span style="font-size: 20px;">Anand pitti</span>
+              <span class="theme-text-ash">has shared a video</span>
+              <span class="right theme-text-ash hide-on-small-only" style="font-size: 10px;"><i class="material-icons tiny right">query_builder</i>3:37 pm</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <ul>
+                <li>
+                        Finite automata constuction using Cardboard, DIY project Lecture by AP Shanti
+                      <span class="new badge blue" data-badge-caption="">DIY</span>
+                      <span class="new badge red hide-on-small-only" data-badge-caption="">modeling</span>
+                    </li>
+                    <li>
+                    <div class="card transparent z-depth-0 center">
+                      <div class="card-content">
+                <div class="video-container">
+                    <iframe width="100" height="100" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+                    </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+  </div>
+</div>
+
+Congratulating post-----------------------------------------------------
+
+{
+"type" : "congratulate post",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"user_name" : "Who",
+"post_title" : "Congratulations!",
+"post_text" : "helllo"
+}
+
+<div class="">
+  <div class="card horizontal theme-color-dark-primary2" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0),0 1px 5px 0 rgba(214,47,47,0),0 3px 1px -1px rgba(214,47,47,0); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0),0 1px 5px 0 rgba(214,47,47,0),0 3px 1px -1px rgba(214,47,47,0)">
+    <div class="card-image z-depth-0">
+          <img class="responsive-img" src="images/sample.jpg" style="height: 250px; width: auto;">
+          <span class="card-title">Anandpitti</span>
+      </div>
+        <div class="card-stacked">
+          <div class="card-content center">
+            <span class="card-title theme-text-light-primary">Congratulations!</span>
+            <span class="theme-text-light-primary">You have achieved a astonishing milestone by sleeping continous 5 hour strech in pom class.</span>
+          </div>
+      </div>
+  </div>
+</div>
+
+job addition / intern post--------------------------------------------------------
+
+{
+"type" : "opportunity add",
+"posted_by" : "Anand Pitti",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"company_name" : "company name",
+"location" : "location",
+"time_period" : "period of intern",
+"current_state" : "Active",
+"created_date_time" : "11/11/2017 09:00 PM",
+"job_type" : "Intern type",
+"description" : "this is the project short description",
+"contact_mail_id" : "poster@gmail.com",
+"language" : ["python", "java"],
+"technical" : ["algo", "network"],
+"tags" : ["tag 1", "tag2"]
+}
+
+<div class="">
+  <div class="card" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85)">
+        <div class="card-content">
+            <div>
+              <img src="" class="responsive-img circle left" style="height: 30px;">
+              <span style="font-size: 20px;">Anand pitti</span>
+              <span class="theme-text-ash">has added a opportunity</span>
+              <span class="right theme-text-ash hide-on-small-only" style="font-size: 10px;"><i class="material-icons tiny right">query_builder</i>3:37 pm</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <ul>
+                <li>
+                      <span class="new badge blue" data-badge-caption="">INETERN</span>
+                      <span class="new badge red hide-on-small-only" data-badge-caption="">JOB</span>
+                    </li>
+
+                    <li>
+                      Intern/Job opportunity at Company name, Location for this many months. 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-action center">
+            <a href="#!" class="theme-text-ash activator">for more details</a>
+          </div>
+          <div class="card-reveal">
+        <a href="#!"><i class="material-icons right theme-text-ash">close</i></a>
+        <div class="#">
+                  <span>Current State: <span class="green-text darken-4">Open</span></span>
+                  <span class="right hide-on-small-only">Created on 11/11/2017 09:00 PM</span>
+
+                  <div class="card theme-color-dark-primary z-depth-0">
+                    <div class="card-content">
+                      <span class="card-title theme-text-light-primary"><span>Job type (eg, SDE, Dev Ops, IT management, etc.)</span></span>
+                      <span class="theme-text-light-primary">
+                        <p>This is the short description</p>
+                      </span>
+                    </div>
+                  </div>
+                
+                <span class="theme-text-black">Contact mail id</span>
+                <span class="theme-text-dark-primary">postermailid@gmail.com</span>
+                <br><br>
+
+                <span class="theme-text-black">Languages preferred</span><br>
+                <span class="theme-text-dark-primary">
+                  Python<br>
+                  Java
+                </span>
+                <br><br>
+
+                <span class="theme-text-black">Technicals preferred</span><br>
+                <span class="theme-text-dark-primary">
+                  Algorithms<br>
+                  Compilers<br>
+                  networks
+                </span>
+                <br><br>
+                
+                <div class="chip">tag 1</div>
+                <div class="chip">tag 2</div>
+              </div>
+              <span class="theme-text-ash">Posted by Anand Pitti at 3:37 pm, Nov, 2017.</span>
+      </div>
+  </div>
+</div>
+
+event addition post-----------------------------------------------------------
+
+{
+"type" : "event add",
+"posted_by" : "Anandpitti"
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"event_name" : "OSPC",
+"event_description" : "nothing",
+"tags" : ["core1","core2"],
+"date_of_event" : "22 November 2017",
+"venue" : "R1 CS Dept",
+"time_of_event" : "5 PM",
+"contact": "Anand",
+"link" : "hackerrank.com/au_contest"
+}
+
+<div class="">
+  <div class="card" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85)">
+        <div class="card-content">
+            <div>
+              <img id="post_i_user_img" src="" class="responsive-img circle left" style="height: 30px;">
+              <span style="font-size: 20px;">Anand pitti</span>
+              <span class="theme-text-ash">has added a new event</span>
+              <span class="right theme-text-ash hide-on-small-only" style="font-size: 10px;"><i class="material-icons tiny right">query_builder</i>3:37 pm</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <ul>
+                <li>
+                      <span class="new badge blue" data-badge-caption="">Sync'17</span>
+                      <span class="new badge red hide-on-small-only" data-badge-caption="">technical</span>
+                    </li>
+
+                    <li>
+                      <span class="card-title">OSPC</span>
+                      <span>Description about the event</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-action center">
+            <a href="#!" class="theme-text-ash activator">for more details</a>
+          </div>
+          <div class="card-reveal">
+        <span class="card-title theme-text-dark-primary">Card Title<i class="material-icons right theme-text-ash">close</i></span>
+        <ul>
+          <li>
+            <span class="new badge blue" data-badge-caption="">Sync'17</span>
+                      <span class="new badge red hide-on-small-only" data-badge-caption="">technical</span>
+                  </li>
+
+                  <li>
+                    <span>Description about the event</span>
+                  </li>
+                  <li>
+                    <br>
+                  </li>
+                  <li>
+                      <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">event</i>
+                      <span>22 November 2017</span>
+                  </li>
+                  <li>
+                      <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">place</i>
+                      <span>R1 CS Dept</span>
+                  </li>
+                  <li>
+                      <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">alarm</i>
+                      <span>5 PM</span>
+                  </li>
+                  <li>
+                      <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">contacts</i>
+                      <span>Anand</span>
+                  </li>
+                  <li>
+                      <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">launch</i>
+                      <span>hackerrank.com/au_contest</span>
+                  </li>
+              </ul>
+      </div>
+  </div>
+</div>
+
+reminder post--------------------------------------------
+
+{
+"type" : "reminder post",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"post_text" : "reminder about the event"
+}
+
+<div class="">
+  <div class="card theme-color-dark-primary2" style="box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85); webkit-box-shadow: 0 2px 2px 0 rgba(214,47,47,0.14),0 1px 5px 0 rgba(214,47,47,0.12),0 3px 1px -1px rgba(214,47,47,0.85)">
+        <div class="card-content center theme-text-light-primary">
+            <span class="card-title"><i class="material-icons medium">notifications_active</i></span>
+            <p>Only a few days to go for such an event to happen at so and so for duration of some hours.</p>
+            <p>For more details, see the events page or contact organiser ??????</p>
+        </div>
+  </div>
+</div>
+
+
+page number at last
+
+<div class="card transparent z-depth-0">
+  <div class="card-content theme-text-dark-primary" style="padding: 0px;">
+    <span class=""> Page 1 </span>
+  </div>
+</div>
+
+pagination div
+
+<ul class="pagination center">
+  <li class="waves-effect"><a href="javascript:show_post_in_page('prev')"><i class="material-icons theme-text-dark-primary">chevron_left</i></a></li>
+  <li class="active"><a href="javascript:show_post_in_page('prev')"><span class="theme-text-dark-primary">1</span></a></li>
+  <li class="waves-effect"><a href="javascript:show_post_in_page('prev')"><span class="theme-text-dark-primary">2</span></a></li>
+  <li class="waves-effect"><a href="javascript:show_post_in_page('prev')"><span class="theme-text-dark-primary">3</span></a></li>
+  <li class="waves-effect"><a href="javascript:show_post_in_page('prev')"><span class="theme-text-dark-primary">4</span></a></li>
+  <li class="waves-effect"><a href="javascript:show_post_in_page('prev')"><span class="theme-text-dark-primary">5</span></a></li>
+  <li class="waves-effect"><a href="javascript:show_post_in_page('next')"><i class="material-icons theme-text-dark-primary">chevron_right</i></a></li>
+</ul>
+
+
+events tab 
+
+{
+"event_name" : "OSPC",
+"event_description" : "nothing",
+"tags" : ["core1","core2"],
+"date_of_event" : "22 November 2017",
+"venue" : "R1 CS Dept",
+"time_of_event" : "5 PM",
+"contact": "Anand",
+"link" : "hackerrank.com/au_contest"
+}
+
+<div class="card white z-depth-0">
+  <div class="card-content">
+    <div class="center">
+        <span class="card-title theme-color-dark-primary theme-text-light-primary z-depth-2" style="border-top-right-radius: 5px; border-top-left-radius: 5px; margin-bottom: 0px;">CODING WEEK 5</span>
+      </div>
+      <div class="z-depth-2">
+        <ul style="margin: 0px;">
+          <li>
+            <br>
+          </li>
+          <li>
+            <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">event</i>
+            <span>22 November 2017</span>
+          </li>
+          <li>
+            <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">place</i>
+            <span>R1 CS Dept</span>
+          </li>
+          <li>
+            <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">alarm</i>
+            <span>5 PM</span>
+          </li>
+          <li>
+            <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">contacts</i>
+            <span>Anand</span>
+          </li>
+          <li>
+            <i class="btn-floating transparent z-depth-0 material-icons small theme-text-ash">launch</i>
+            <span>hackerrank.com/au_contest</span>
+          </li>
+        </ul>                       
+      </div>
+      <div class="center">
+        <a href="javascript:show_single_event('event_name')">
+        <span class="card-title theme-color-ash theme-text-light-primary z-depth-2" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; font-size: 15px; margin-top: 0px;">for more details</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+
+side tab card details
+width*height dimen
+170*170 card
+
+170*51.5 word div
+
+170*118 pic
+
+
+
+
+
+notifications modal
+
+
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#notifications_modal">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="notifications_modal" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+          
+
+notifications and updates div
+
+{
+"type" : "update/notification",
+"time_of_post" : "3:00 PM",
+"date_of_post" : "22/11/2017",
+"text" : "Try out the new search by nickname feature"
+}
+
+            <table class="bordered">
+              <tbody>
+                <tr>
+                  <td><span>hello world</span></td>
+                </tr>
+                <tr>
+            <td><span>hello world</span></td>
+                </tr>
+                <tr>
+                  <td><span>hello world</span></td>
+                </tr>
+              </tbody>
+            </table>

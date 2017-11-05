@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  -->
+
+<head>
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="css/materialize.css">
+  	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CShub</title>
+</head>
+
+<body class="theme-color-light-primary">
+
+	<!-- pre loader -->
+	<div class="preloader center valign-center">
+    	<div class="preloader-wrapper active valign-center">
+      		<div class="spinner-layer spinner-blue">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+	        	</div>
+    	  	</div>
+
+      		<div class="spinner-layer spinner-red">
+        		<div class="circle-clipper left">
+	          		<div class="circle"></div>
+    	    	</div>
+    	    	<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+
+      		<div class="spinner-layer spinner-yellow">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+
+      		<div class="spinner-layer spinner-green">
+        		<div class="circle-clipper left">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="gap-patch">
+          			<div class="circle"></div>
+        		</div>
+        		<div class="circle-clipper right">
+          			<div class="circle"></div>
+        		</div>
+      		</div>
+    	</div>   
+  	</div>
+
+  	<div id="main-content" class="main-content">
+		<!-- top nav bar -->
+		<nav id="top-nav" class="z-depth-5 theme-color-dark-primary">
+			<div class="nav-wrapper">
+				<div class="container">
+					<!-- logo and name-->
+          <ul class="brand-logo left">
+            <li> <img class="responsive-img z-depth-6 hide-on-small-and-down" src="images/cshublogo.png" style="height: 50px; width: 50px;  margin-top: 5px"> </li>
+            <li class="theme-text-light-primary">CS Hub</li>
+          </ul>
+
+					<!-- go to home button -->
+					<ul class="right hide-on-small-only">
+            <a href="javascript:validate_edit_profile()" class="z-depth-1 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary">SAVE</a>
+          </ul>
+          <ul class="right hide-on-small-only">
+            <a href="/" class="z-depth-1 waves-effect waves-theme-color-dark-primary btn theme-color-light-primary theme-text-dark-primary">CANCEL</a>
+          </ul>
+          
+          <ul class="right hide-on-med-and-up">
+            <a href="javascript:validate_edit_profile()" class="transparent"><i class="material-icons center theme-text-light-primary">check</i></a>
+          </ul>
+          <ul class="right hide-on-med-and-up">
+            <a href="/" class="transparent"><i class="material-icons center theme-text-light-primary">clear</i></a>
+          </ul>
+
+				</div>
+			</div>
+		</nav>
+
+		<!-- main-content -->
+		<div class="row">
+      
+      <!-- profile div-->
+
+      <div id="register_card" class="col s12 m10 offset-m1">
+        <div class="card transparent z-depth-0">
+            <div class="card-content theme-text-dark-primary">
+              <span class="card-title center">Edit profile</span>
+              <br>
+              <div class="row">
+
+                <div id="t_s_type_div" class="input-field col s12">
+                  
+                </div>
+
+                <div id="register_details" class="col s12">
+                </div>
+                
+              </div>
+            </div>
+          </div>
+      </div>
+
+		</div>
+
+		<!-- footer 
+	    <div class="footer-copyright z-depth-5 theme-color-dark-primary">
+            <div class="container theme-text-light-primary">
+       	    <span>&#0169 2017 All rights reserved. Department of Computer Science, College of Engineering, Guindy.</span>
+         	</div>
+        </div>       
+      -->
+    </div>
+
+	<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  	<!-- Custom JavaScript -->
+  	<script src="js/custom.js"></script>
+
+    <script src="node_modules/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="node_modules/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+    <script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
+    <script src="node_modules/cloudinary-jquery-file-upload/cloudinary-jquery-file-upload.js"></script>
+  	
+</body>

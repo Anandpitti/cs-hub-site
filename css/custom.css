@@ -1,0 +1,224 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+      
+.preloader {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.main-content{
+  visibility: hidden; 
+}
+
+.search-bar{
+  border: none;
+  border-radius: 7px;
+  height: 38px;
+  padding-left: 10px;
+}
+
+/* label focus color */
+ #search-people:focus + label {
+   color: #fff !important;
+ }
+
+ /* label underline focus color */
+ #search-people:focus {
+   border-bottom: 0px transparent !important;
+   box-shadow: 0 1px 0 0 transparent !important
+ }
+
+ .pagination li.active {
+   background: transparent !important;
+ }
+
+ #main-nav-icon {
+    -webkit-transition: margin-top 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: margin-top 0.5s;
+ }
+
+#search_people_main-page + label {
+   color: #505050 !important;
+ }
+
+#search_people_main_page_div input:focus + label{
+  color: #505050 !important;
+}
+
+/* label focus color */
+ #search_people_main-page:focus + label {
+   color: #505050 !important;
+ }
+
+ /* label underline focus color */
+ #search_people_main_page:focus {
+   border-bottom: 1px #505050 !important;
+   box-shadow: 0 1px 0 0 #505050 !important
+ }
+
+li.indicator {
+  background-color: colorcode-theme-color-dark-primary !important;
+}
+
+.autocomplete-content {
+    position: absolute;
+    min-width: 190px;
+}
+
+
+/* sign_in page css */
+
+/* label focus color */
+ #login_email_id_input:focus + label {
+   color: #fff !important;
+ }
+
+#login_email_id_input {
+   border-bottom: 1px white !important;
+   box-shadow: 0 1px 0 0 white !important;
+ }
+
+ /* label underline focus color */
+ #login_email_id_input:focus {
+   border-bottom: 1px white !important;
+   box-shadow: 0 1px 0 0 white !important;
+ }
+
+/* label focus color */
+ #login_password_input:focus + label {
+   color: #fff !important;
+ }
+
+#login_password_input {
+   border-bottom: 1px white !important;
+   box-shadow: 0 1px 0 0 white !important;
+ }
+
+ /* label underline focus color */
+ #login_password_input:focus {
+   border-bottom: 1px white !important;
+   box-shadow: 0 1px 0 0 white !important;
+ }
+
+
+.dropdown-content.select-dropdown.active span{
+  /* theme-text-dark-primary */
+  color: #f00;
+}
+
+.select-wrapper input.select-dropdown{
+   border-bottom: 1px #d1d1d1 !important;
+   box-shadow: 0 1px 0 0 #d1d1d1 !important;
+}
+
+.select-wrapper span.caret{
+  color: #d1d1d1 !important;
+}
+
+#register_details .input-field input:focus + label {
+     color: #d1d1d1;
+   }
+
+#register_details .input-field input:focus {
+     border-bottom: 1px solid #d1d1d1;
+     box-shadow: 0 1px 0 0 #d1d1d1;
+   }
+
+   /* valid color */
+#register_details .input-field input.valid {
+     border-bottom: 1px solid #090;
+     box-shadow: 0 1px 0 0 #090;
+   }
+
+   /* invalid color */
+#register_details .input-field input.invalid {
+     border-bottom: 1px solid #f00;
+     box-shadow: 0 1px 0 0 #f00;
+   }
+
+
+
+   /* profile page */
+
+#school {
+  padding: 0px;
+  margin: 0px;
+}
+
+#ownsite {
+  padding: 0px;
+  margin: 0px;
+}
+
+#work {
+  padding: 0px;
+  margin: 0px;
+}
+
+#connect {
+  padding: 0px;
+  margin: 0px;
+}
+
+#search_people_main-page + label {
+   color: #505050 !important;
+ }
+
+#search_people_main_page_div input:focus + label{
+  color: #505050 !important;
+}
+
+/* label focus color */
+ #search_people_main-page:focus + label {
+   color: #505050 !important;
+ }
+
+ /* label underline focus color */
+ #search_people_main_page:focus {
+   border-bottom: 1px #505050 !important;
+   box-shadow: 0 1px 0 0 #505050 !important
+ }
+
+  /* gallery page */
+
+input[type=range]::-webkit-slider-thumb {
+    background-color: colorcode-theme-color-dark-primary;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    background-color: colorcode-theme-color-dark-primary;
+  }
+  input[type=range]::-ms-thumb {
+    background-color: colorcode-theme-color-dark-primary;
+  }
+
+  /***** These are to edit the thumb and the text inside the thumb *****/
+  input[type=range] + .thumb {
+    background-color: colorcode-theme-color-dark-primary;
+  }
+  input[type=range] + .thumb.active .value {
+    color: #ffffff;
+  }
+
+
+  #image_thumbnails_div + .card:focus{
+    z-index: 4;
+  }
+
+/*notifications table border*/
+  #notifications_modal td{
+    border-color: colorcode-theme-color-dark-primary;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
